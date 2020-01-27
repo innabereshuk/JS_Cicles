@@ -96,12 +96,24 @@ function allDiviers() {
     alert(`Делители числа  ${num} : \n${dividers}`);
 }
 
-
-console.log(dividers);
 allDiviers();
 
+// Определить количество цифр в введенном числе.
 
+ let number = prompt('Введите любое число');
+ let quantity = 0;
 
+ if (number != '' && number !== null) {
+     for(let i = 0; i < number.length; i++) {
+         quantity += 1;
+     }
+     alert(`В набранном вами числе ${quantity} цифр`);
+} else {
+    alert('Операция отменена');
+}
+    
+
+ 
 })();
 
 
