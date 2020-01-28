@@ -84,17 +84,17 @@ NOD(x, y);
 
 // Запросить у пользователя число и вывести все делители этого числа.
 
-let num = prompt('Введите любое число больше 0');
-let dividers = [];
+ let num = prompt('Введите любое число больше 0');
+ let dividers = [];
 
-function allDiviers() {
-    for (let i = 1; i < num; i++) {
-        if (num % i == 0) {
-            dividers.push(i);
-        }
-    }
-    alert(`Делители числа  ${num} : \n${dividers}`);
-}
+ function allDiviers() {
+     for (let i = 1; i < num; i++) {
+         if (num % i == 0) {
+             dividers.push(i);
+         }
+     }
+     alert(`Делители числа  ${num} : \n${dividers}`);
+ }
 
 allDiviers();
 
@@ -113,7 +113,53 @@ allDiviers();
 }
     
 
+// Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. При этом также посчитать, сколько четных и нечетных. Вывести статистику на экран. 
  
+let nums = [] = prompt('Введите через зяпятую 10 чисел');
+
+
+if (nums !== null) {
+    nums = nums.split(',');
+    console.log(nums);
+    
+    let positivNums = 0;
+    let negativNums = 0;
+    let zero = 0;
+    let evenNum = 0;
+    let oddNum = 0;
+    
+
+        function numberQuantity() {
+           for (let i = 0; i < nums.length; i++) {
+
+                if (nums[i] > 0 && nums[i] !=0) {
+                       positivNums += 1;
+                    } else if (nums[i] < 0 && nums[i] != 0) {
+                        negativNums += 1;
+                       } else {
+                            zero += 1;
+                        }
+
+                if (nums[i] % 2 == 0 && nums[i] != 0) {
+                    evenNum +=1;
+                     }
+                    if (nums[i] % 2 != 0 && nums[i] != 0) {
+                         oddNum += 1;
+                    }
+            }
+            document.write(`Вы ввели положительных чисел: ${ positivNums} <br> отрицательных чисел: ${negativNums} <br> нулей: ${zero} <br> чётных чисел: ${evenNum} <br> нечётных чисел: ${oddNum}`)
+        }
+
+    numberQuantity();
+
+    } else {
+        alert('Отмена операции! Вы ввели больше 10 цифр.');
+    }
+
+
+
+    
+
 })();
 
 
